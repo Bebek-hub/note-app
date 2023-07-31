@@ -23,6 +23,7 @@ main {
 
 .notes_header {
   display: flex;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
   margin: 1.5rem 0 1rem;
@@ -64,7 +65,7 @@ input:hover, textarea:hover {
 }
 
 .btn {
-  background-color: #9a9999;
+  background-color: #64626293;
   color: #ffffff;
   border: none;
   border-radius: 0.5rem;
@@ -80,6 +81,15 @@ input:hover, textarea:hover {
   gap: 1rem;
 }
 
+.empty_note {
+  color: #9a9999;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .note {
   background: #64626293;
   opacity: 0.8;
@@ -92,9 +102,9 @@ input:hover, textarea:hover {
   cursor: pointer;
 }
 
-/* .note_details {
-  padding-top: 0.2rem;
-} */
+.note:hover {
+  opacity: 0.9;
+}
 
 .note_date {
   font-size: 0.8rem;
@@ -129,3 +139,20 @@ input:hover, textarea:hover {
   color: #f72929;
 }
 
+
+@media screen and (min-width: 600px) {
+  :root {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+    width: 50vw;
+    border: 2px solid blue;
+  }
+
+  .btn__add {
+    position: fixed;
+    right: 50%;
+    bottom: 1rem;
+  }
+
+  
+}
