@@ -145,7 +145,6 @@ input:hover, textarea:hover {
     padding: 1.5rem 1rem;
     margin: 1rem;
     width: 50vw;
-    border: 2px solid blue;
   }
 
   .btn__add {
