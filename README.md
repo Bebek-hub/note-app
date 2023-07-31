@@ -13,3 +13,6 @@ It consists of:
 ## Storage
 - All notes are stored in the local storage. 
 
+### Deployed site
+Site - Netlify
+Link - https://create-note-app.netlify.app/
