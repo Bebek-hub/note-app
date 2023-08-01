@@ -5,10 +5,12 @@
 }
 
 body {
-  background-color: #181818;
   color: #ffffff;
+  background-color: #181818;
   display: grid;
   overflow-y: scroll;
+  margin-left: auto;
+  margin-right: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -18,7 +20,8 @@ body {
 
 main {
   padding: 0.8rem 0.5rem;
-  margin: 0.5rem;
+  margin: 1rem;
+  background-color: #181818;
 }
 
 .notes_header {
@@ -140,17 +143,22 @@ input:hover, textarea:hover {
 }
 
 
-@media screen and (min-width: 600px) {
-  :root {
+@media screen and (min-width: 820px) {
+  body {
     padding: 1.5rem 1rem;
-    margin: 1rem;
-    width: 50vw;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .btn__add {
     position: fixed;
-    right: 50%;
-    bottom: 1rem;
+    right: 5%;
+    bottom: 3rem;
+  }
+
+  .notes_container {
+    grid-template-areas: '1fr 1fr 1fr';
   }
 
   
