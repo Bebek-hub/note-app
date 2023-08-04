@@ -39,7 +39,7 @@ const Notes = ({ notes }) => {
             placeholder="Keyword..."
           />
         )}
-        <button
+        <button type="submit"
           onClick={() => {
             setShowSearch((prevState) => !prevState);
           }}

@@ -9,17 +9,19 @@ import './App.css'
 import { useState, useEffect } from "react";
 
 const App = () => {
-  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem('notes')) || [])
+  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem('notes')) || []) 
+  // get the notes from local storage
 
   useEffect(() => {
     localStorage.setItem('notes', JSON.stringify(notes))
   }, [notes])
+  // set the notes to local storage
 
   return (
     <main>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Notes notes={notes}/>} />
+          <Route path="/" element={<Notes notes={notes}/>} /> 
           <Route path="create-notes" element={<CreateNotes setNotes={setNotes} />} />
           <Route path="edit-notes/:id" element={<EditNotes notes={notes} setNotes={setNotes} />} />
         </Routes>
