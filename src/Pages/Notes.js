@@ -14,6 +14,7 @@ const Notes = ({ notes }) => {
     setFilteredNotes(
       // eslint-disable-next-line array-callback-return
       notes.filter((note) => {
+        // this is for the search icon. If the title matches any title in the list of notes, then return the note.
         if (note.title.toLowerCase().match(text.toLocaleLowerCase())) {
           return note;
         }
@@ -26,7 +27,9 @@ const Notes = ({ notes }) => {
   return (
     <section>
       <header className="notes_header">
-        {!showSearch && <h2>My Notes</h2>}
+        {!showSearch && <h2>My Notes</h2>} 
+        {/* show the h2 if showSearch is true */}
+        {/* Show what is below if showSearch is false */}
         {showSearch && (
           <input
             type="text"
@@ -46,13 +49,16 @@ const Notes = ({ notes }) => {
           className="btn"
         >
           {showSearch ? <MdClose /> : <CiSearch />}
+          {/* When you click on show search, the icon changes to close else the show icon is shown */}
         </button>
       </header>
 
       <div className="notes_container">
+        {/* If no search, display the paragraph note */}
         {filteredNotes.length === 0 && (
           <p className="empty_note">No notes found</p>
         )}
+        {/* Map the notes to the NoteItem file */}
         {filteredNotes.map((note) => (
           <NoteItem key={note.id} note={note} />
         ))}

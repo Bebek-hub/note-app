@@ -31,9 +31,10 @@ const setDate = () => {
         break;
     }
     
-    const date = `${monthName} ${dateObj.getDate()}, ${dateObj.getFullYear()} (${dateObj.getHours()}:${dateObj.getMinutes()}:${dateObj.getSeconds()})`;
+    const date = `${monthName} ${dateObj.getDate()}, ${dateObj.getFullYear()} (${dateObj.getHours()}:${dateObj.getMinutes() < 10 ? "0" + dateObj.getMinutes() : dateObj.getMinutes()}:${dateObj.getSeconds() < 10 ? "0" + dateObj.getSeconds() : dateObj.getSeconds()})`;
     return date;
 }
+// This is for the date formats
 
 
 export default setDate
