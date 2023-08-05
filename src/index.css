@@ -76,6 +76,12 @@ input:hover, textarea:hover {
   padding: 0.3rem 0.5rem;
 }
 
+.btn:hover {
+  background-color: #9a9999;
+  color: #181818;
+  cursor: pointer;
+}
+
 /* Notes */
 
 .notes_container {
@@ -136,6 +142,11 @@ input:hover, textarea:hover {
 .create-note__form input {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.create-note__form textarea {
+  font-size: 1.5rem;
 }
 
 .btn_delete {
@@ -149,12 +160,12 @@ input:hover, textarea:hover {
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
+    max-width: 900px;
   }
 
   .btn__add {
-    position: fixed;
-    right: 5%;
-    bottom: 3rem;
+    right: 15%;
+    bottom: 2rem;
   }
 
   .notes_container {
@@ -163,3 +174,9 @@ input:hover, textarea:hover {
 
   
 }
+
+/* @media screen and (min-width: 1024px) {
+  .notes_container {
+    grid-template-areas: '1fr 1fr 1fr 1fr';
+  }
+} */
