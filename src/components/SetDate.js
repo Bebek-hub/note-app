@@ -46,7 +46,7 @@ const setDate = () => {
   const date = `${monthName} 
     ${dateObj.getDate()}, 
     ${dateObj.getFullYear()} 
-    (${dateObj.getHours() < 10 ? dateObj.getHours() + "0" : dateObj.getHours()}:
+    (${dateObj.getHours() < 10 ? "0" + dateObj.getHours() : dateObj.getHours()}:
     ${
       dateObj.getMinutes() < 10
         ? "0" + dateObj.getMinutes()
